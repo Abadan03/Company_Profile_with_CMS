@@ -4,7 +4,7 @@
 
 @section('content')
     {{-- Hero Section --}}
-    <div class="relative bg-gray-800 h-screen flex items-center lg:px-28">
+    <section class="relative bg-gray-800 h-screen flex items-center lg:px-28 -mt-[120px]">
         <img src="{{ asset('assets/bg-home.png') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
 
@@ -25,10 +25,10 @@
                 </svg>
             </a>
         </div>
-    </div>
+    </section>
 
     {{-- Section 1 --}}
-    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 my-24 lg:px-20">
+    <section class="flex flex-col lg:flex-row items-center justify-between gap-10 my-24 lg:px-20">
         <div class="lg:w-1/2 text-center lg:text-left">
             <h2 class="text-2xl font-bold mb-3">Compressed Natural Gas (CNG)</h2>
             <p class="text-sm leading-relaxed">
@@ -48,10 +48,10 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </section>
 
     {{-- Section 2 --}}
-    <div class="container mx-auto px-5 lg:px-20 py-20 bg-[#F4F4F4]">
+    <section class="container mx-auto px-5 lg:px-20 py-20 bg-[#F4F4F4]">
         <h2 class="text-2xl font-semibold text-center pb-12">Keunggulan Menggunakan CNG</h2>
 
         {{-- Grid untuk menampung semua item keunggulan --}}
@@ -99,10 +99,10 @@
                 <p class="mt-4 font-medium text-gray-700">Biaya produksi lebih hemat hingga 30-40%</p>
             </div>
         </div>
-    </div>
+    </section>
 
     {{-- Section 3 --}}
-    <div class="container mx-auto px-5 lg:px-20 pt-20">
+    <section class="container mx-auto px-5 lg:px-20 pt-20">
         <h2 class="text-3xl pb-5">Mother Station</h2>
         <p class="text-md mb-8">
             Kami menyediakan fasilitas lengkap mulai dari proses kompresi gas alam,
@@ -113,10 +113,10 @@
         <div class="w-full h-96 overflow-hidden rounded-lg shadow-lg">
             <img src="{{ asset('assets/mf-station.png') }}" alt="Mother Station" class="w-full h-full object-cover">
         </div>
-    </div>
+    </section>
 
     {{-- Section 4 --}}
-    <div class="container mx-auto px-5 lg:px-20 pt-10 mb-20">
+    <section class="container mx-auto px-5 lg:px-20 pt-10 mb-20">
         <h2 class="text-3xl pb-5">Pipeline Infrastructure</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -176,7 +176,131 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
     {{-- Section 5 --}}
+    <section class="bg-white py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-medium text-center mb-10">Klien Kami</h2>
+            {{-- LEFT --}}
+            <div class="relative w-full overflow-hidden mb-8">
+                <div class="marquee-track marquee-left">
+                    {{-- Looping dari controller brok --}}
+                    @foreach (array_merge($clients, $clients) as $client)
+                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
+                                class="max-h-24 w-auto">
+                        </div>
+                    @endforeach
+                    @foreach (array_merge($clients, $clients) as $client)
+                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
+                                class="max-h-24 w-auto">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            {{-- RIGHT --}}
+            <div class="relative w-full overflow-hidden mb-8">
+                <div class="marquee-track marquee-right">
+                    {{-- Looping dari controller brok --}}
+                    @foreach (array_merge($clients, $clients) as $client)
+                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
+                                class="max-h-24 w-auto">
+                        </div>
+                    @endforeach
+                    @foreach (array_merge($clients, $clients) as $client)
+                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
+                                class="max-h-24 w-auto">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Section 6 --}}
+    <section class="py-16 lg:mx-20">
+        <div class="container mx-auto px-4">
+            {{-- Header Section --}}
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800">Article</h2>
+                <a href="#"
+                    class="group flex items-center space-x-2 text-orange-500 font-semibold transition-colors hover:text-orange-600">
+                    <span>Selengkapnya</span>
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-orange-500 flex items-center justify-center transition-transform group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+                {{-- Looping -> iso mok jupuk teko controller langsung (kyk section 5) --}}
+                @for ($i = 0; $i < 6; $i++)
+                    <a href="#"
+                        class="block bg-white p-6 rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <div class="flex flex-col h-full">
+                            {{-- Tanggal --}}
+                            <p class="text-sm text-gray-500">
+                                Berita <span class="mx-1">|</span> Senin, 23 September 2025
+                            </p>
+
+                            {{-- Judul --}}
+                            <h3 class="mt-2 text-md font-bold text-gray-900 leading-tight line-clamp-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            </h3>
+
+                            <hr class="my-4">
+
+                            {{-- Artikel --}}
+                            <p class="text-gray-600 text-sm flex-grow line-clamp-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua.
+                            </p>
+
+                            <div class="mt-4 text-right">
+                                <div
+                                    class="inline-flex items-center justify-center w-9 h-9 rounded-full border-2 border-orange-500 text-orange-500 transition-colors group-hover:bg-orange-500 group-hover:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                @endfor
+            </div>
+        </div>
+    </section>
+
+    {{-- Section 7 --}}
+    <section class="relative bg-gray-800 h-96">
+        <img src="{{ asset('assets/bg-home1.png') }}"
+            alt="CNG Transportation" class="absolute inset-0 w-full h-full object-cover">
+
+        {{-- Konten --}}
+        <div class="relative container px-6 py-40 lg:px-20">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+                <h2 class="text-white text-3xl font-bold tracking-widest text-center md:text-left">
+                    Wujudkan Energi Bersih Bersama Kami
+                </h2>
+
+                <a href="#"
+                    class="inline-block bg-orange-400 text-white font-bold text-lg px-8 py-2 rounded-md shadow-md transition-transform hover:scale-105 hover:bg-orange-500 flex-shrink-0">
+                    Hubungi Kami
+                </a>
+
+            </div>
+        </div>
+    </section>
+
 @endsection

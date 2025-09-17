@@ -1,4 +1,4 @@
-<header class="absolute top-0 left-0 w-full z-50 lg:px-20">
+<header id="main-header" class="sticky top-0 left-0 w-full z-50 lg:px-20 transition-colors duration-300">
     <nav class="container mx-auto px-6 py-4" aria-label="Main Navigation">
         <div class="hidden lg:flex items-center text-white text-sm my-4">
             <a href="#" class="hover:underline">English</a>
@@ -124,6 +124,17 @@
                 if (!mobileMenu.classList.contains('hidden')) {
                     toggleMenu(false);
                 }
+            }
+        });
+
+
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-gray-800/90', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-gray-800/90', 'backdrop-blur-md', 'shadow-lg');
             }
         });
     });

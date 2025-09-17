@@ -17,8 +17,7 @@
 
             <div class="md:col-span-2 lg:col-span-1">
                 <div class="flex items-center space-x-1 mb-2">
-                    <img src="{{ asset('assets/logo.png') }}"
-                        alt="Logo Icon">
+                    <img src="{{ asset('assets/logo.png') }}" alt="Logo Icon">
                     <span class="text-white font-bold text-xl tracking-wider">PT. RAJAWALI CHAKTI UTAMA</span>
                 </div>
                 <p class="text-sm italic ml-1">for remarkable advancement</p>
@@ -72,7 +71,7 @@
             <div>
                 <h4 class="font-bold text-white">Ikuti kami dan dapatkan info menarik!</h4>
                 <div class="flex items-center space-x-4 mt-4">
-                    <a href="#" class="hover:text-white">
+                    <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="whatsapp"
                             class="w-6 h-6" />
                     </a>
@@ -80,16 +79,16 @@
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="instagram"
                             class="w-6 h-6" />
                     </a>
-                    <a href="#" class="hover:text-white">
+                    <a href="#" class="hover:text-white m-0">
                         <svg class="w-6 h-6">
                             <use href="#icon-mail"></use>
                         </svg>
                     </a>
-                    <a href="#" class="hover:text-white">
+                    <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
                             class="w-6 h-6" />
                     </a>
-                    <a href="#" class="hover:text-white">
+                    <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok--v1.png" alt="tiktok"
                             class="w-6 h-6" />
                     </a>
