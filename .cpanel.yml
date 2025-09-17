@@ -1,15 +1,5 @@
-# deployment:
-#   tasks:
-#     - export DEPLOYPATH=/home/ptrcucom/
-#     - /bin/cp -r * $DEPLOYPATH
-#     - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
-#     - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/css
-
-    deployment:
-      tasks:
-        - export DEPLOYPATH=/home/ptrcucom/public_html/
-        - /bin/cp -R . $DEPLOYPATH
-        - /bin/cp -R public/. $DEPLOYPATH
-        - /bin/rm -R $DEPLOYPATH/public
-        - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
-        - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/css
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ptrcucom/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
