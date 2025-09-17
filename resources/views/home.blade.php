@@ -9,14 +9,13 @@
             class="absolute inset-0 w-full h-full object-cover opacity-30">
 
         <div class="relative container mx-auto px-6 lg:px-20">
-            <h1 class="text-white text-4xl lg:text-5xl font-bold leading-tight">Solusi Energi Berkelanjutan</h1>
+            <h1 class="text-white text-4xl lg:text-5xl font-bold leading-tight">{{ $hero->title }}</h1>
             <p class="text-white text-lg my-8 max-w-2xl">
-                Melalui teknologi Compressed Natural Gas Container (CNGC), kami menghadirkan energi bersih yang aman,
-                efisien, dan ramah lingkungan untuk mendukung kebutuhan energi Indonesia.
+                {{ $hero->content }}
             </p>
             <a href="#"
                 class="text-white inline-flex items-center space-x-3 text-lg hover:text-orange-400 transition-colors">
-                <span>Selengkapnya</span>
+                <span>{{ __('Selengkapnya') }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10" />
@@ -185,40 +184,21 @@
             {{-- LEFT --}}
             <div class="relative w-full overflow-hidden mb-8">
                 <div class="marquee-track marquee-left">
-                    {{-- Looping dari controller brok --}}
-                    @foreach (array_merge($clients, $clients) as $client)
+                    @foreach ($clients as $client)
                         <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
-                                class="max-h-24 w-auto">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}" class="max-h-24 w-auto">
                         </div>
                     @endforeach
-                    @foreach (array_merge($clients, $clients) as $client)
+                    {{-- duplikat sekali lagi --}}
+                    @foreach ($clients as $client)
                         <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
-                                class="max-h-24 w-auto">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}" class="max-h-24 w-auto">
                         </div>
                     @endforeach
                 </div>
             </div>
 
-            {{-- RIGHT --}}
-            <div class="relative w-full overflow-hidden mb-8">
-                <div class="marquee-track marquee-right">
-                    {{-- Looping dari controller brok --}}
-                    @foreach (array_merge($clients, $clients) as $client)
-                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
-                                class="max-h-24 w-auto">
-                        </div>
-                    @endforeach
-                    @foreach (array_merge($clients, $clients) as $client)
-                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
-                                class="max-h-24 w-auto">
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+            
         </div>
     </section>
 
