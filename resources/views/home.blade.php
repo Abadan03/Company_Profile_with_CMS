@@ -27,6 +27,8 @@
         </div>
     </section>
 
+    <div class="w-full h-6 bg-orange-400"></div>
+
     {{-- Section 1 --}}
     <section class="flex flex-col lg:flex-row items-center justify-between gap-10 my-24 lg:px-20">
         <div class="lg:w-1/2 text-center lg:text-left">
@@ -192,12 +194,6 @@
                                 class="max-h-24 w-auto">
                         </div>
                     @endforeach
-                    @foreach (array_merge($clients, $clients) as $client)
-                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
-                                class="max-h-24 w-auto">
-                        </div>
-                    @endforeach
                 </div>
             </div>
 
@@ -205,12 +201,6 @@
             <div class="relative w-full overflow-hidden mb-8">
                 <div class="marquee-track marquee-right">
                     {{-- Looping dari controller brok --}}
-                    @foreach (array_merge($clients, $clients) as $client)
-                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
-                                class="max-h-24 w-auto">
-                        </div>
-                    @endforeach
                     @foreach (array_merge($clients, $clients) as $client)
                         <div class="flex-shrink-0 mx-8 flex items-center justify-center">
                             <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
@@ -283,7 +273,7 @@
 
     {{-- Section 7 --}}
     <section class="relative bg-gray-800 h-96">
-        <img src="{{ asset('assets/bg-home1.png') }}"
+        <img src="{{ asset('assets/bg-home1.webp') }}"
             alt="CNG Transportation" class="absolute inset-0 w-full h-full object-cover">
 
         {{-- Konten --}}

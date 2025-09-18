@@ -8,16 +8,54 @@
 
         <div class="flex items-center justify-between">
             <ul class="hidden lg:flex items-baseline">
-                <li><a href="#" class="text-white border-b-2 font-bold me-5">Beranda</a></li>
-                <li><a href="#" class="text-white hover:border-b-2 me-5">Tentang Kami</a>
+                <li>
+                    <a href="{{ route('home') }}" @class([
+                        'border-b-2 font-bold' => Route::is('home'),
+                        'text-white hover:border-b-2 me-5 transition-colors',
+                    ])>
+                        Beranda
+                    </a>
                 </li>
-                <li><a href="#" class="text-white hover:border-b-2 me-5">Produk &
-                        Layanan</a></li>
-                <li><a href="#" class="text-white hover:border-b-2 me-5">Struktur
-                        Organisasi</a></li>
-                <li><a href="#" class="text-white hover:border-b-2 me-5">Berita &
-                        Artikel</a></li>
-                <li><a href="#" class="text-white hover:border-b-2">Galeri</a></li>
+                <li>
+                    <a href="{{ route('about') }}" @class([
+                        'border-b-2 font-bold' => Route::is('about'),
+                        'text-white hover:border-b-2 me-5 transition-colors',
+                    ])>
+                        Tentang Kami
+                    </a>
+                </li>
+                <li>
+                    <a href="#" @class([
+                        'border-b-2 font-bold' => Route::is('products.*'),
+                        'text-white hover:border-b-2 me-5 transition-colors',
+                    ])>
+                        Produk & Layanan
+                    </a>
+                </li>
+                <li>
+                    <a href="#" @class([
+                        'border-b-2 font-bold' => Route::is('organization'),
+                        'text-white hover:border-b-2 me-5 transition-colors',
+                    ])>
+                        Struktur Organisasi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" @class([
+                        'border-b-2 font-bold' => Route::is('articles.*'),
+                        'text-white hover:border-b-2 me-5 transition-colors',
+                    ])>
+                        Berita & Artikel
+                    </a>
+                </li>
+                <li>
+                    <a href="#" @class([
+                        'border-b-2 font-bold' => Route::is('gallery'),
+                        'text-white hover:border-b-2 transition-colors',
+                    ])>
+                        Galeri
+                    </a>
+                </li>
             </ul>
 
             <div class="flex-1 flex lg:justify-end">
@@ -59,7 +97,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
                 </path>
             </svg> </a>
-        <a href="#" class="flex justify-between items-center py-4 text-white">Tentang Kami <svg
+        <a href="{{ route('about') }}" class="flex justify-between items-center py-4 text-white">Tentang Kami <svg
                 class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
                 </path>
@@ -130,12 +168,16 @@
 
         const header = document.getElementById('main-header');
 
-        window.addEventListener('scroll', () => {
+        function handleHeaderScroll() {
             if (window.scrollY > 50) {
                 header.classList.add('bg-gray-800/90', 'backdrop-blur-md', 'shadow-lg');
             } else {
                 header.classList.remove('bg-gray-800/90', 'backdrop-blur-md', 'shadow-lg');
             }
-        });
+        }
+
+        window.addEventListener('scroll', handleHeaderScroll);
+
+        handleHeaderScroll();
     });
 </script>
