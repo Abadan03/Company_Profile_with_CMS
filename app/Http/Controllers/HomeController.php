@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Multilanghero;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,9 @@ class HomeController extends Controller
             ['name' => 'PJB', 'logo' => 'assets/client/pjb.webp'],
         ];
 
-        return view('home', compact('clients'));
+        // Multi language
+        $hero = Multilanghero::first();
+
+        return view('home', compact('clients', 'hero'));
     }
 }

@@ -1,13 +1,30 @@
 <header id="main-header" class="sticky top-0 left-0 w-full z-50 lg:px-20 transition-colors duration-300">
     <nav class="container mx-auto px-6 py-4" aria-label="Main Navigation">
         <div class="hidden lg:flex items-center text-white text-sm my-4">
-            <a href="#" class="hover:underline">English</a>
+            <a href="{{ route('lang.switch', 'en') }}" 
+            class="{{ app()->getLocale() == 'en' ? 'font-bold underline' : 'hover:underline' }}">
+                English
+            </a>
             <span class="mx-2">|</span>
-            <a href="#" class="font-bold underline">Indonesia</a>
+            <a href="{{ route('lang.switch', 'id') }}" 
+            class="{{ app()->getLocale() == 'id' ? 'font-bold underline' : 'hover:underline' }}">
+                Indonesia
+            </a>
         </div>
+
 
         <div class="flex items-center justify-between">
             <ul class="hidden lg:flex items-baseline">
+              {{-- dari branch main --}}
+                <li><a href="#" class="text-white border-b-2 font-bold me-5">{{ __('Beranda') }}</a></li>
+                <li><a href="#" class="text-white hover:border-b-2 me-5">{{ __('Tentang_kami') }}</a>
+                </li>
+                <li><a href="#" class="text-white hover:border-b-2 me-5">{{ __('Produk_dan_Layanan') }}</a></li>
+                <li><a href="#" class="text-white hover:border-b-2 me-5">{{ __('Struktur_organisasi') }}</a></li>
+                <li><a href="#" class="text-white hover:border-b-2 me-5">{{ __('Berita_dan_Artikel') }}</a></li>
+                <li><a href="#" class="text-white hover:border-b-2">{{ __('Galeri') }}</a></li>
+                
+              {{-- dari branch development --}}
                 <li>
                     <a href="{{ route('home') }}" @class([
                         'border-b-2 font-bold' => Route::is('home'),
