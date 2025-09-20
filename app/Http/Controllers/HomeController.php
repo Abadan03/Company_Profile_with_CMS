@@ -24,7 +24,8 @@ class HomeController extends Controller
 
         // Multi language
         $hero = Multilanghero::first();
+        // dd($hero);
 
-        return view('home', compact('clients', 'hero'));
+        return view('landing_page.home', compact('clients', 'hero'));
     }
 }

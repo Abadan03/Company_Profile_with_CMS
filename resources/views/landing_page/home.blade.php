@@ -54,8 +54,6 @@
     {{-- Section 2 --}}
     <section class="container mx-auto px-5 lg:px-20 py-20 bg-[#F4F4F4]">
         <h2 class="text-2xl font-semibold text-center pb-12">Keunggulan Menggunakan CNG</h2>
-
-        {{-- Grid untuk menampung semua item keunggulan --}}
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-12">
 
             <div class="flex flex-col items-center text-center">
@@ -121,15 +119,18 @@
         <h2 class="text-3xl pb-5">Pipeline Infrastructure</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Metering System -->
             <div class="relative overflow-hidden rounded-xl group shadow-lg">
                 <img src="{{ asset('assets/infra.png') }}" alt="Metering System"
                     class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110">
 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute inset-0 shadow-[inset_0_-80px_60px_-20px_rgba(249,115,22,0.5)]"></div>
+                </div>
 
                 <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-white">
                     <span class="text-lg font-medium">Metering System</span>
-
                     <span
                         class="w-9 h-9 flex items-center justify-center rounded-full border border-white/50 bg-white/10 backdrop-blur-sm transition-transform group-hover:scale-110">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -140,11 +141,15 @@
                 </div>
             </div>
 
+            <!-- Metering Regulating Station -->
             <div class="relative overflow-hidden rounded-xl group shadow-lg">
                 <img src="{{ asset('assets/infra1.png') }}" alt="Metering Regulating Station"
                     class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110">
 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute inset-0 shadow-[inset_0_-80px_60px_-20px_rgba(249,115,22,0.5)]"></div>
+                </div>
 
                 <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-white">
                     <span class="text-lg font-medium">Metering Regulating Station</span>
@@ -158,11 +163,15 @@
                 </div>
             </div>
 
+            <!-- Pressure Reducing System -->
             <div class="relative overflow-hidden rounded-xl group shadow-lg">
                 <img src="{{ asset('assets/infra2.png') }}" alt="Pressure Reducing System"
                     class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110">
 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute inset-0 shadow-[inset_0_-80px_60px_-20px_rgba(249,115,22,0.5)]"></div>
+                </div>
 
                 <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-white">
                     <span class="text-lg font-medium">Pressure Reducing System</span>
@@ -175,8 +184,8 @@
                     </span>
                 </div>
             </div>
-
         </div>
+
     </section>
 
     {{-- Section 5 --}}
@@ -186,22 +195,12 @@
             {{-- LEFT --}}
             <div class="relative w-full overflow-hidden mb-8">
                 <div class="marquee-track marquee-left">
-                    @foreach ($clients as $client)
+                    @foreach (array_merge($clients, $clients) as $client)
                         <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}" class="max-h-24 w-auto">
+                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}"
+                                class="max-h-24 w-auto">
                         </div>
                     @endforeach
-                  {{-- Dari main --}}
-                    {{-- duplikat sekali lagi --}}
-                    @foreach ($clients as $client)
-                        <div class="flex-shrink-0 mx-8 flex items-center justify-center">
-                            <img src="{{ asset($client['logo']) }}" alt="{{ $client['name'] }}" class="max-h-24 w-auto">
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-
-
                 </div>
             </div>
 
@@ -217,7 +216,6 @@
                     @endforeach
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -282,8 +280,8 @@
 
     {{-- Section 7 --}}
     <section class="relative bg-gray-800 h-96">
-        <img src="{{ asset('assets/bg-home1.webp') }}"
-            alt="CNG Transportation" class="absolute inset-0 w-full h-full object-cover">
+        <img src="{{ asset('assets/bg-home1.webp') }}" alt="CNG Transportation"
+            class="absolute inset-0 w-full h-full object-cover">
 
         {{-- Konten --}}
         <div class="relative container px-6 py-40 lg:px-20">
