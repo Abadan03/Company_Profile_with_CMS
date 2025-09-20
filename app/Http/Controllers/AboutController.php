@@ -15,6 +15,6 @@ class AboutController extends Controller
             ['name' => 'lp4', 'logo' => 'assets/legalitas/lp4.png'],
             ['name' => 'lp5', 'logo' => 'assets/legalitas/lp5.png'],
         ];
-        return view('about', compact('legal'));
+        return view('landing_page.about', compact('legal'));
     }
 }
