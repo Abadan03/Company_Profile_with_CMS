@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'About - Solusi Energi Berkelanjutan')
+@section('title', 'Organizations - Solusi Energi Berkelanjutan')
 
 @section('content')
     {{-- Title --}}
@@ -14,5 +14,23 @@
 
     <div class="w-full h-6 bg-orange-400"></div>
 
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto rounded-xl shadow-lg overflow-hidden border border-gray-200">
+
+                {{-- Header Kartu Oranye --}}
+                <div class="bg-orange-400 p-4 flex items-center justify-center space-x-3 w-full">
+                    <img src="{{ asset('assets/logo.png') }}" alt="Logo">
+                    <h3 class="text-white font-bold text-xl tracking-wider">PT. RAJAWALI CHAKTI UTAMA</h3>
+                </div>
+
+                <div class="bg-gray-100 p-8 md:p-16">
+                    <img src="{{ asset('assets/struktur.png') }}" alt="Struktur Organisasi PT Rajawali Chakti Utama"
+                        class="w-full h-auto">
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 @endsection
