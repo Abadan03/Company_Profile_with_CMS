@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'Gallery - Solusi Energi Berkelanjutan')
+@section('title', 'Gallery - RAJAWALI CHAKTI UTAMA')
 
 @section('content')
     <section class="relative bg-gray-800 h-60 flex items-center px-6 lg:px-28 -mt-[120px]">

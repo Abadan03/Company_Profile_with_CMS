@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'Organizations - Solusi Energi Berkelanjutan')
+@section('title', 'Organizations - RAJAWALI CHAKTI UTAMA')
 
 @section('content')
     {{-- Title --}}

@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'Services - Solusi Energi Berkelanjutan')
+@section('title', 'Services - RAJAWALI CHAKTI UTAMA')
 
 @section('content')
     {{-- Title --}}
@@ -86,8 +86,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($services as $service)
-                    <a href="#" class="group relative block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-
+                    <a href="{{ route('service.show', ['service' => $service['id']]) }}" class="group relative block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                         <img src="{{ $service['image'] }}" alt="{{ $service['title'] }}"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110">
 

@@ -69,7 +69,7 @@
             <div class="flex-1 flex lg:justify-end">
                 <a href="#" class="flex items-center space-x-2">
                     <img src="{{ asset('assets/logo.png') }}" alt="Logo Icon">
-                    <span class="text-white font-bold text-lg tracking-wider">PT. RAJAWALI BHAKTI UTAMA</span>
+                    <span class="text-white font-bold text-lg tracking-wider">PT. RAJAWALI CHAKTI UTAMA</span>
                 </a>
             </div>
 
