@@ -3,39 +3,59 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
 class ServiceController extends Controller
 {
+    /**
+     * Menampilkan semua layanan.
+     */
     public function index()
     {
-        $services = [
-            ['id' => 1,'title' => 'Mother Station (CNG Station)', 'image' => asset('assets/layanan/l1.png')],
-            ['id' => 2,'title' => 'CNG Supply & Distribution', 'image' => asset('assets/layanan/l2.png')],
-            ['id' => 3,'title' => 'Chub CNG Manufacture', 'image' => asset('assets/layanan/l3.png')],
-            ['id' => 4,'title' => 'Consultant Energy', 'image' => asset('assets/layanan/l4.png')],
-            ['id' => 5,'title' => 'Pipeline Installation', 'image' => asset('assets/layanan/l5.png')],
-            ['id' => 6,'title' => 'Pressure Reducing System', 'image' => asset('assets/layanan/l6.png')],
-            ['id' => 7,'title' => 'Metering System', 'image' => asset('assets/layanan/l7.png')],
-            ['id' => 8,'title' => 'Metering Regulating Station', 'image' => asset('assets/layanan/l8.png')],
-        ];
+        $services = $this->getDummyServices();
 
         return view('landing_page.service.index', compact('services'));
     }
 
+    /**
+     * Menampilkan detail satu layanan.
+     */
     public function show($id)
     {
-        $allServices = [
-            ['id' => 1, 'title' => 'Mother Station (CNG Station)', 'description' => 'Deskripsi lengkap tentang Mother Station...'],
-            ['id' => 2, 'title' => 'CNG Supply & Distribution', 'description' => 'Deskripsi lengkap tentang Supply & Distribution...'],
-            ['id' => 3, 'title' => 'Chub CNG Manufacture', 'description' => 'Deskripsi lengkap tentang Chub CNG Manufacture...'],
-        ];
+        $allServices = $this->getDummyServices();
 
-        $service = collect($allServices)->firstWhere('id', $id);
+        $service = $allServices->firstWhere('id', $id);
 
         if (!$service) {
-            return redirect()->route('service')->with('error', 'Service not found.');
+            return redirect()->route('services.index')->with('error', 'Layanan tidak ditemukan.');
         }
 
-        return view('landing_page.service.detail');
+        return view('landing_page.service.detail', compact('service'));
+    }
+
+    /**
+     * Cuma data dummy, lek wes konek database dihapus ae
+     */
+    private function getDummyServices(): Collection
+    {
+        $serviceData = [
+            ['title' => 'Mother Station (CNG Station)', 'image' => 'assets/layanan/l1.png'],
+            ['title' => 'CNG Supply & Distribution', 'image' => 'assets/layanan/l2.png'],
+            ['title' => 'Chub CNG Manufacture', 'image' => 'assets/layanan/l3.png'],
+            ['title' => 'Consultant Energy', 'image' => 'assets/layanan/l4.png'],
+            ['title' => 'Pipeline Installation', 'image' => 'assets/layanan/l5.png'],
+            ['title' => 'Pressure Reducing System', 'image' => 'assets/layanan/l6.png'],
+            ['title' => 'Metering System', 'image' => 'assets/layanan/l7.png'],
+            ['title' => 'Metering Regulating Station', 'image' => 'assets/layanan/l8.png'],
+        ];
+
+        return collect($serviceData)->map(function ($item, $key) {
+            return (object) [
+                'id' => $key + 1,
+                'title' => $item['title'],
+                'image' => $item['image'],
+                'description' => 'Ini adalah deskripsi lengkap untuk ' . $item['title'] . '. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            ];
+        });
     }
 }

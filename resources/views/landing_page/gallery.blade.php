@@ -12,7 +12,8 @@
     </section>
 
     <div class="w-full h-6 bg-orange-400"></div>
-    <section class="bg-gray-50 py-16">
+
+    <section class="bg-gray-50 py-16 px-6 lg:px-20">
         <div class="container mx-auto px-4">
             <div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-6">Video</h2>
@@ -38,21 +39,53 @@
 
                 </div>
             </div>
-
-            <div class="mt-16">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Foto</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                    @for ($i = 0; $i < 3; $i++)
-                        <a href="#" class="group block aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                            <img src="{{ asset('assets/layanan/l3.png') }}"
-                                alt="Foto Galeri {{ $i + 1 }}"
-                                class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
-                        </a>
-                    @endfor
-                </div>
-            </div>
-
         </div>
     </section>
+
+    <section class="bg-white pb-16 px-6 lg:px-20">
+        <div class="container mx-auto px-4">
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Foto</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                {{-- Kiri: 2 foto berdampingan --}}
+                {{-- 1. Diubah dari `grid grid-cols-2` menjadi `flex` --}}
+                <div class="lg:col-span-2 flex gap-6 max-h-[500px]">
+
+                    <a href="#" class="group block w-full rounded-xl overflow-hidden shadow-lg">
+                        {{-- 2. Dihapus `div` pembungkus `aspect-[16/9]` agar tinggi bisa fleksibel --}}
+                        <img src="{{ asset('assets/galeri/g1.png') }}" alt="Foto Galeri 1"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        {{-- 3. Ditambahkan `h-full` --}}
+                    </a>
+
+                    <a href="#" class="group block w-full rounded-xl overflow-hidden shadow-lg">
+                        <img src="{{ asset('assets/galeri/g2.png') }}" alt="Foto Galeri 2"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        {{-- 3. Ditambahkan `h-full` --}}
+                    </a>
+                </div>
+
+                {{-- Kanan: 2 foto bertumpuk (Tidak ada perubahan di sini) --}}
+                <div class="grid grid-rows-2 gap-6">
+                    <a href="#" class="group block rounded-xl overflow-hidden shadow-lg">
+                        <div class="aspect-[16/9]">
+                            <img src="{{ asset('assets/galeri/g3.png') }}"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        </div>
+                    </a>
+                    <a href="#" class="group block rounded-xl overflow-hidden shadow-lg">
+                        <div class="aspect-[16/9]">
+                            <img src="{{ asset('assets/galeri/g4.png') }}"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
 @endsection

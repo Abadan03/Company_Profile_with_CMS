@@ -14,7 +14,7 @@
 
     <div class="w-full h-6 bg-orange-400"></div>
 
-    <section class="bg-gray-50 py-16">
+    <section class="bg-gray-50 py-16 px-6 lg:px-20">
         <div class="container mx-auto px-4">
 
             <form action="{{ route('article') }}" method="GET" class="mb-10">
@@ -65,7 +65,7 @@
             {{-- Grid Artikel --}}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 @forelse ($articles as $article)
-                    <a href="#"
+                    <a href="{{ route('article.show',['article' => $article->id]) }}"
                         class="group bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
 
                         {{-- Gambar --}}

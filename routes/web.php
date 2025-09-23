@@ -24,6 +24,7 @@ Route::get('/organization', [OrganizationController::class, 'index'])->name('org
 
 // Article
 Route::get('/article', [ArticleController::class, 'index'])->name('article');
+Route::get('/article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 // Gallery
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');

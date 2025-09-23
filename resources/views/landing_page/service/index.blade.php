@@ -86,8 +86,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($services as $service)
-                    <a href="{{ route('service.show', ['service' => $service['id']]) }}" class="group relative block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                        <img src="{{ $service['image'] }}" alt="{{ $service['title'] }}"
+                    <a href="{{ route('service.show', ['service' => $service->id]) }}" class="group relative block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                        <img src="{{ $service->image }}" alt="{{ $service->title }}"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110">
 
                         <div class="absolute inset-0 pointer-events-none">
@@ -98,7 +98,7 @@
                         <div class="absolute inset-0 flex flex-col justify-end p-6">
                             <div class="flex items-end justify-between">
                                 <h3 class="text-white text-xl font-bold w-3/4">
-                                    {{ $service['title'] }}
+                                    {{ $service->title }}
                                 </h3>
                                 <div
                                     class="w-9 h-9 rounded-full border-2 border-white/80 flex items-center justify-center transition-all duration-300 group-hover:bg-white/20 group-hover:scale-110 flex-shrink-0">

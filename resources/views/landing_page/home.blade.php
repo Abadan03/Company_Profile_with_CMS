@@ -52,7 +52,7 @@
     </section>
 
     {{-- Section 2 --}}
-    <section class="container mx-auto px-5 lg:px-20 py-20 bg-[#F4F4F4]">
+    <section class="mx-auto px-5 lg:px-20 py-20 bg-[#F4F4F4]">
         <h2 class="text-2xl font-semibold text-center pb-12">Keunggulan Menggunakan CNG</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-12">
 
