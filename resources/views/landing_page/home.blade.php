@@ -29,8 +29,8 @@
     <div class="w-full h-6 bg-orange-400"></div>
 
     {{-- Section 1 --}}
-    <section class="flex flex-col lg:flex-row items-center justify-between gap-10 my-24 lg:px-20">
-        <div class="lg:w-1/2 text-center lg:text-left">
+    <section class="flex flex-col lg:flex-row items-center justify-between gap-10 my-24 px-6 lg:px-20">
+        <div class="lg:w-1/2">
             <h2 class="text-2xl font-bold mb-3">Compressed Natural Gas (CNG)</h2>
             <p class="text-sm leading-relaxed">
                 CNG merupakan salah satu sumber energi alternatif yang disimpan dalam tekanan tinggi
@@ -57,51 +57,51 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-12">
 
             <div class="flex flex-col items-center text-center">
-                <div class="w-28 h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                <div class="w-20 h-20 lg:w-28 lg:h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
                     <img src="{{ asset('assets/icons/leaf.webp') }}" class="w-16 h-16" alt="">
                 </div>
-                <p class="mt-4 font-medium text-gray-700">Bahan bakar yang ramah lingkungan dan bersih</p>
+                <p class="mt-4 text-sm lg:text-lg font-medium text-gray-700">Bahan bakar yang ramah lingkungan dan bersih</p>
             </div>
 
             <div class="flex flex-col items-center text-center">
-                <div class="w-28 h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                    <img src="{{ asset('assets/icons/speedo.webp') }}" class="w-16 h-16" alt="">
+                <div class="w-20 h-20 lg:w-28 lg:h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                    <img src="{{ asset('assets/icons/speedo.webp') }}" class="w-14 h-14 lg:w-16 lg:h-16" alt="">
                 </div>
-                <p class="mt-4 font-medium text-gray-700">Menghasilkan gas emisi yang rendah</p>
+                <p class="mt-4 text-sm lg:text-lg font-medium text-gray-700">Menghasilkan gas emisi yang rendah</p>
             </div>
 
             <div class="flex flex-col items-center text-center">
-                <div class="w-28 h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                    <img src="{{ asset('assets/icons/receipt.webp') }}" class="w-16 h-16" alt="">
+                <div class="w-20 h-20 lg:w-28 lg:h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                    <img src="{{ asset('assets/icons/receipt.webp') }}" class="w-14 h-14 lg:w-16 lg:h-16" alt="">
                 </div>
-                <p class="mt-4 font-medium text-gray-700">Investasi yang murah dan tahan lama</p>
+                <p class="mt-4 text-sm lg:text-lg font-medium text-gray-700">Investasi yang murah dan tahan lama</p>
             </div>
 
             <div class="flex flex-col items-center text-center">
-                <div class="w-28 h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                    <img src="{{ asset('assets/icons/clean.webp') }}" class="w-16 h-16" alt="">
+                <div class="w-20 h-20 lg:w-28 lg:h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                    <img src="{{ asset('assets/icons/clean.webp') }}" class="w-14 h-14 lg:w-16 lg:h-16" alt="">
                 </div>
-                <p class="mt-4 font-medium text-gray-700">Mesin produksi lebih bersih</p>
+                <p class="mt-4 text-sm lg:text-lg font-medium text-gray-700">Mesin produksi lebih bersih</p>
             </div>
 
             <div class="flex flex-col items-center text-center">
-                <div class="w-28 h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                    <img src="{{ asset('assets/icons/protect.webp') }}" class="w-16 h-16" alt="">
+                <div class="w-20 h-20 lg:w-28 lg:h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                    <img src="{{ asset('assets/icons/protect.webp') }}" class="w-14 h-14 lg:w-16 lg:h-16" alt="">
                 </div>
-                <p class="mt-4 font-medium text-gray-700">Bahan bakar yang aman di banding bahan bakar lain.</p>
+                <p class="mt-4 text-sm lg:text-lg font-medium text-gray-700">Bahan bakar yang aman di banding bahan bakar lain.</p>
             </div>
 
             <div class="flex flex-col items-center text-center">
-                <div class="w-28 h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                    <img src="{{ asset('assets/icons/hand.webp') }}" class="w-16 h-16" alt="">
+                <div class="w-20 h-20 lg:w-28 lg:h-28 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                    <img src="{{ asset('assets/icons/hand.webp') }}" class="w-14 h-14 lg:w-16 lg:h-16" alt="">
                 </div>
-                <p class="mt-4 font-medium text-gray-700">Biaya produksi lebih hemat hingga 30-40%</p>
+                <p class="mt-4 text-sm lg:text-lg font-medium text-gray-700">Biaya produksi lebih hemat hingga 30-40%</p>
             </div>
         </div>
     </section>
 
     {{-- Section 3 --}}
-    <section class="container mx-auto px-5 lg:px-20 pt-20">
+    <section class="mx-auto px-6 lg:px-20 pt-20">
         <h2 class="text-3xl pb-5">Mother Station</h2>
         <p class="text-md mb-8">
             Kami menyediakan fasilitas lengkap mulai dari proses kompresi gas alam,
@@ -115,7 +115,7 @@
     </section>
 
     {{-- Section 4 --}}
-    <section class="container mx-auto px-5 lg:px-20 pt-10 mb-20">
+    <section class="container mx-auto px-6 lg:px-20 pt-10 mb-20">
         <h2 class="text-3xl pb-5">Pipeline Infrastructure</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -220,8 +220,8 @@
     </section>
 
     {{-- Section 6 --}}
-    <section class="py-16 lg:mx-20">
-        <div class="container mx-auto px-4">
+    <section class="py-16 lg:mx-20 px-6">
+        <div class="container mx-auto">
             {{-- Header Section --}}
             <div class="flex justify-between items-center mb-10">
                 <h2 class="text-3xl font-bold text-gray-800">Article</h2>

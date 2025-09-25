@@ -80,9 +80,8 @@
                             class="w-6 h-6" />
                     </a>
                     <a href="#" class="hover:text-white m-0">
-                        <svg class="w-6 h-6">
-                            <use href="#icon-mail"></use>
-                        </svg>
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/gmail-new.png" alt="gmail"
+                            class="w-6 h-6" />
                     </a>
                     <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
