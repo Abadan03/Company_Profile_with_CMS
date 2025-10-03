@@ -4,18 +4,18 @@
 
 @section('content')
     {{-- Title --}}
-    <section class="relative bg-gray-800 h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
+    <section class="relative bg-gray-800 h-48 lg:h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
         <img src="{{ asset('assets/bg-uni.webp') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative container">
-            <h1 class="text-5xl text-white mt-20">Tentang Kami</h1>
+            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Tentang Kami</h1>
         </div>
     </section>
 
     <div class="w-full h-6 bg-orange-400"></div>
 
     {{-- Section 1 --}}
-    <section class="container mx-auto px-5 lg:px-28 py-20 bg-[#F4F4F4]">
+    <section class="container mx-auto px-6 lg:px-20 py-20 bg-[#F4F4F4]">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <img src="{{ asset('assets/profile.webp') }}" alt="Fasilitas PT Rajawali Chakti Utama"
@@ -49,7 +49,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                    <div class="bg-orange-500 p-6">
+                    <div class="bg-orange-500 p-4 lg:p-6">
                         <h3 class="text-white text-3xl font-bold text-center">Visi</h3>
                     </div>
                     <div class="bg-white p-8 flex-grow">

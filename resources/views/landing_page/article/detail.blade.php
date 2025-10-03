@@ -4,16 +4,16 @@
 
 @section('content')
     {{-- Title --}}
-    <section class="relative bg-gray-800 h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
+    <section class="relative bg-gray-800 h-48 lg:h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
         <img src="{{ asset('assets/bg-uni.webp') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative container">
-            <h1 class="text-5xl text-white mt-20">Berita & Artikel</h1>
+            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Berita & Artikel</h1>
         </div>
     </section>
     <div class="w-full h-6 bg-orange-400"></div>
 
-    <section class="bg-white py-12 px-6 lg:px-20">
+    <section class="bg-white py-10 px-6 lg:px-20">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-12">
                 <article class="lg:col-span-2">
@@ -21,13 +21,11 @@
                     <nav class="text-sm text-gray-500 mb-4">
                         <a href="{{ route('article') }}" class="hover:underline">Berita & Artikel</a>
                         <span class="mx-2">></span>
-                        <a href="{{ route('article') }}" class="hover:underline">Berita</a>
-                        <span class="mx-2">></span>
                         <span class="text-gray-700">{{ $article->title }}</span>
                     </nav>
 
                     {{-- Judul Artikel --}}
-                    <h1 class="text-4xl font-bold text-gray-900 leading-tight">
+                    <h1 class="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
                         {{ $article->title }}
                     </h1>
 

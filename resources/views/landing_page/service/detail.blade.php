@@ -3,10 +3,11 @@
 @section('title', 'Services - RAJAWALI CHAKTI UTAMA')
 
 @section('content')
-    <section class="relative bg-gray-800 h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
+    {{-- Hero Section --}}
+    <section class="relative bg-gray-800 h-52 lg:h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
         <img src="{{ asset('assets/bg-detail.png') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
-        <div class="relative container mx-auto mt-20">
+        <div class="relative container mx-auto mt-28 lg:mt-20">
             <div class="flex items-center space-x-2">
                 {{-- Ikon "Kembali" --}}
                 <a href="{{ route('service') }}" class="flex-shrink-0 text-white transition-transform hover:scale-110">
@@ -18,46 +19,47 @@
                     </div>
                 </a>
 
-                {{-- Judul Halaman (mt-20 dihapus) --}}
-                <h1 class="text-4xl text-white font-semibold">
+                {{-- Judul Halaman --}}
+                <h1 class="text-lg sm:text-2xl lg:text-4xl text-white font-semibold">
                     {{ $service->title }}
                 </h1>
             </div>
         </div>
     </section>
 
-    <section class="px-20 bg-white py-16">
-        <div class="container mx-auto px-4">
+    {{-- Konten Utama --}}
+    <section class="px-6 sm:px-10 lg:px-20 bg-white py-12 sm:py-16">
+        <div class="container mx-auto px-0 sm:px-4">
 
-            <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-10">
+            {{-- Deskripsi + CTA --}}
+            <div class="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 mb-10">
 
                 <div class="max-w-3xl">
-                    <p class="text-gray-600 leading-relaxed">
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
                         {{ $service->description }}
                     </p>
                 </div>
 
-                <div class="flex-shrink-0">
+                <div class="flex-shrink-0 w-full md:w-auto mt-4 md:mt-0">
                     <a href="#"
-                        class="inline-block bg-orange-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-orange-600 transition-colors">
+                        class="block text-center md:inline-block bg-orange-500 text-white font-semibold px-6 sm:px-8 py-3 rounded-lg shadow-md hover:bg-orange-600 transition-colors">
                         Hubungi Kami
                     </a>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {{-- Gambar --}}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div>
-                    <img src="{{ asset($service->image) }}" alt="Ilustrasi Stasiun Gas 1"
-                        class="w-full h-96 object-cover rounded-xl shadow-lg">
+                    <img src="{{ asset($service->image) }}" alt="Ilustrasi Stasiun Gas"
+                        class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg">
                 </div>
-
                 <div>
-                    <img src="{{ asset($service->image) }}" alt="Ilustrasi Stasiun Gas 1"
-                        class="w-full h-96 object-cover rounded-xl shadow-lg">
+                    <img src="{{ asset($service->image) }}" alt="Ilustrasi Stasiun Gas"
+                        class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg">
                 </div>
             </div>
 
         </div>
     </section>
-
 @endsection

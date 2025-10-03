@@ -4,11 +4,11 @@
 
 @section('content')
     {{-- Title --}}
-    <section class="relative bg-gray-800 h-60 flex items-center px-6 lg:px-28 -mt-[120px]">
+    <section class="relative bg-gray-800 h-48 lg:h-60 flex items-center px-6 lg:px-20 -mt-[120px]">
         <img src="{{ asset('assets/bg-uni.webp') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative container">
-            <h1 class="text-5xl text-white mt-20">Produk & Layanan</h1>
+            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Produk & Layanan</h1>
         </div>
     </section>
 
@@ -16,10 +16,10 @@
 
     {{-- Section 1 --}}
     <section class="bg-[#F4F4F4] overflow-hidden px-6 lg:px-28">
-        <div class="container mx-auto px-4 pt-5">
+        <div class="mx-auto px-4 pt-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                <div class="text-center lg:text-left">
+                <div>
                     <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
                         Solusi Energi Bersih & Efisien
                     </h1>
@@ -29,46 +29,18 @@
                         komitmen kami, setiap solusi energi yang ditawarkan selalu mengutamakan keamanan, efisiensi, dan
                         keberlanjutan.
                     </p>
-
-                    <div class="mt-4 flex items-center justify-center lg:justify-start">
-
-                        <div class="flex flex-col items-center text-center me-5">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                                <img src="{{ asset('assets/icons/leaf.webp') }}" class="w-10 h-10" alt="">
+                    <div class="mt-4 grid grid-cols-6 gap-4 place-items-center">
+                        @foreach (['leaf', 'speedo', 'receipt', 'clean', 'protect', 'hand'] as $icon)
+                            <div class="flex flex-col items-center text-center">
+                                <div
+                                    class="w-12 h-12 lg:w-16 lg:h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                                    <img src="{{ asset("assets/icons/$icon.webp") }}" class="w-6 h-6 lg:w-8 lg:h-8"
+                                        alt="{{ $icon }}">
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center me-5">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                                <img src="{{ asset('assets/icons/speedo.webp') }}" class="w-10 h-10" alt="">
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center me-5">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                                <img src="{{ asset('assets/icons/receipt.webp') }}" class="w-10 h-10" alt="">
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center me-5">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                                <img src="{{ asset('assets/icons/clean.webp') }}" class="w-10 h-10" alt="">
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center me-5">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                                <img src="{{ asset('assets/icons/protect.webp') }}" class="w-10 h-10" alt="">
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center me-5">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
-                                <img src="{{ asset('assets/icons/hand.webp') }}" class="w-10 h-10" alt="">
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
+
                 </div>
 
                 <div class=" justify-center lg:justify-end hidden lg:flex">
@@ -81,12 +53,13 @@
     </section>
 
     {{-- Section 2 --}}
-    <section class="bg-gray-50 py-16 px-6 lg:px-28">
+    <section class="bg-gray-50 py-16 px-6 lg:px-20">
         <div class="container mx-auto px-4">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($services as $service)
-                    <a href="{{ route('service.show', ['service' => $service->id]) }}" class="group relative block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                    <a href="{{ route('service.show', ['service' => $service->id]) }}"
+                        class="group relative block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                         <img src="{{ $service->image }}" alt="{{ $service->title }}"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110">
 
