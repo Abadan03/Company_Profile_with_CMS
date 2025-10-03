@@ -91,7 +91,7 @@
     <div class="flex items-center justify-between p-4 border-b border-gray-800">
         <a href="#" class="flex items-center space-x-2">
             <img src="{{ asset('assets/logo.png') }}" alt="Logo Icon">
-            <span class="text-white font-bold text-lg">PT. RAJAWALI BHAKTI UTAMA</span>
+            <span class="text-white font-bold text-lg">PT. RAJAWALI CHAKTI UTAMA</span>
         </a>
         <button id="close-menu-button" class="text-orange-500" aria-label="Close menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
