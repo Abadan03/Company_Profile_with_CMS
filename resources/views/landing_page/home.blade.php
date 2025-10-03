@@ -109,7 +109,7 @@
             layanan konsultasi energi profesional untuk memastikan efisiensi dan keamanan.
         </p>
 
-        <div class="w-full h-96 overflow-hidden rounded-lg shadow-lg">
+        <div class="w-full overflow-hidden rounded-lg shadow-lg">
             <img src="{{ asset('assets/mf-station.png') }}" alt="Mother Station" class="w-full h-full object-cover">
         </div>
     </section>
