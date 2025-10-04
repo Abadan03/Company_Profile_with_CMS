@@ -8,7 +8,7 @@
         <img src="{{ asset('assets/bg-uni.webp') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative container">
-            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Produk & Layanan</h1>
+            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">{{ __('Navigation.Produk_dan_Layanan') }}</h1>
         </div>
     </section>
 
@@ -21,15 +21,12 @@
 
                 <div>
                     <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                        Solusi Energi Bersih & Efisien
+                        {{ __('P&D_tittle') }}
                     </h1>
                     <p class="mt-4 text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        Kami menyediakan layanan berbasis Compressed Natural Gas (CNG) untuk mendukung industri dan
-                        transportasi dengan biaya hemat, ramah lingkungan, serta teknologi modern. Dengan pengalaman dan
-                        komitmen kami, setiap solusi energi yang ditawarkan selalu mengutamakan keamanan, efisiensi, dan
-                        keberlanjutan.
+                        {{ __('P&D_desc') }}
                     </p>
-                    <div class="mt-4 grid grid-cols-6 gap-4 place-items-center">
+                    <div class="mt-8 grid grid-cols-6 gap-4 place-items-start">
                         @foreach (['leaf', 'speedo', 'receipt', 'clean', 'protect', 'hand'] as $icon)
                             <div class="flex flex-col items-center text-center">
                                 <div
@@ -91,20 +88,20 @@
 
     {{-- Section 3 --}}
     <section class="relative bg-gray-800 h-96">
-        <img src="{{ asset('assets/bg-home1.webp') }}" alt="CNG Transportation"
+        <img src="{{ asset('assets/mf-station.png') }}" alt="CNG Transportation"
             class="absolute inset-0 w-full h-full object-cover">
 
         {{-- Konten --}}
         <div class="relative container px-6 py-40 lg:px-20">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
 
-                <h2 class="text-white text-3xl font-bold tracking-widest text-center md:text-left">
-                    Wujudkan Energi Bersih Bersama Kami
+                <h2 class="text-white text-3xl backdrop-blur-2xl p-4 rounded-2xl shadow-2xl font-bold tracking-widest text-center md:text-left">
+                    {{ __('Last_section') }}
                 </h2>
 
                 <a href="#"
                     class="inline-block bg-orange-400 text-white font-bold text-lg px-8 py-2 rounded-md shadow-md transition-transform hover:scale-105 hover:bg-orange-500 flex-shrink-0">
-                    Hubungi Kami
+                    {{ __('Last_contact') }}
                 </a>
 
             </div>

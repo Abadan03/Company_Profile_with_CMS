@@ -21,7 +21,7 @@
                         'border-b-2 font-bold' => Route::is('home'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Beranda') }}
+                        {{ __('Navigation.Beranda') }}
                     </a>
                 </li>
                 <li>
@@ -29,7 +29,7 @@
                         'border-b-2 font-bold' => Route::is('about'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Tentang_kami') }}
+                        {{ __('Navigation.Tentang_kami') }}
                     </a>
                 </li>
                 <li>
@@ -37,7 +37,7 @@
                         'border-b-2 font-bold' => Route::is('service'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Produk_dan_Layanan') }}
+                        {{ __('Navigation.Produk_dan_Layanan') }}
                     </a>
                 </li>
                 <li>
@@ -45,23 +45,23 @@
                         'border-b-2 font-bold' => Route::is('organization'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Struktur_organisasi') }}
+                        {{ __('Navigation.Struktur_organisasi') }}
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{ route('article') }}" @class([
                         'border-b-2 font-bold' => Route::is('article'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Berita_dan_Artikel') }}
+                        {{ __('Navigation.Berita_dan_Artikel') }}
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{ route('gallery') }}" @class([
                         'border-b-2 font-bold' => Route::is('gallery'),
                         'text-white hover:border-b-2 transition-colors',
                     ])>
-                        {{ __('Galeri') }}
+                        {{ __('Navigation.Galeri') }}
                     </a>
                 </li>
             </ul>
@@ -149,7 +149,7 @@
             </svg>
         </a>
 
-        <a href="{{ route('article') }}" @class([
+        {{-- <a href="{{ route('article') }}" @class([
             'flex justify-between items-center py-4',
             'text-orange-500 font-bold' => Route::is('article'),
             'text-white' => !Route::is('article'),
@@ -159,7 +159,7 @@
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-        </a>
+        </a> --}}
 
         <a href="{{ route('gallery') }}" @class([
             'flex justify-between items-center py-4',

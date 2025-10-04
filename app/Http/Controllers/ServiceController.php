@@ -39,7 +39,7 @@ class ServiceController extends Controller
     private function getDummyServices(): Collection
     {
         $serviceData = [
-            ['title' => 'Mother Station (CNG Station)', 'image' => 'assets/layanan/l1.png'],
+            ['title' => 'Mother Station (CNG Station)', 'image' => 'assets/ms.png'],
             ['title' => 'CNG Supply & Distribution', 'image' => 'assets/layanan/l2.png'],
             ['title' => 'Chub CNG Manufacture', 'image' => 'assets/layanan/l3.png'],
             ['title' => 'Consultant Energy', 'image' => 'assets/layanan/l4.png'],

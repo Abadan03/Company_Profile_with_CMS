@@ -8,18 +8,18 @@
         <img src="{{ asset('assets/bg-uni.webp') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative container">
-            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Tentang Kami</h1>
+            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">{{ __('About_tittle') }}</h1>
         </div>
     </section>
 
     <div class="w-full h-6 bg-orange-400"></div>
 
     {{-- Section 1 --}}
-    <section class="container mx-auto px-6 lg:px-20 py-20 bg-[#F4F4F4]">
+    <section class="container mx-auto px-6 lg:px-20 py-20 bg-[#F4F4F4] mt-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-                <img src="{{ asset('assets/profile.webp') }}" alt="Fasilitas PT Rajawali Chakti Utama"
-                    class="w-full h-auto rounded-2xl shadow-lg">
+                <img src="{{ asset('assets/ms.png') }}" alt="Fasilitas PT Rajawali Chakti Utama"
+                    class="max-w-[550px] md:min-h-[350px] object-fit rounded-2xl shadow-lg">
             </div>
 
             <div>
@@ -28,15 +28,10 @@
                 </h2>
                 <div class="space-y-4 text-gray-600 leading-relaxed">
                     <p>
-                        PT Rajawali Chakti Utama adalah perusahaan energi yang berfokus pada penyediaan solusi energi bersih
-                        berbasis CNG (Compressed Natural Gas) di Indonesia. Dengan visi menjadi pemimpin pasar energi ramah
-                        lingkungan, perusahaan ini berkomitmen menghadirkan layanan dan produk berkualitas tinggi yang
-                        memenuhi kebutuhan pelanggan, sekaligus mendukung pembangunan berkelanjutan.
+                        {{ __('About_desc')}}
                     </p>
                     <p>
-                        CNG yang ditawarkan lebih ramah lingkungan, mampu menekan emisi hingga 90% dan membantu efisiensi
-                        biaya produksi hingga 30-40%, menjadikannya pilihan energi yang bersih, aman, dan hemat untuk
-                        industri maupun transportasi.
+                        {{ __('About_desc2') }}
                     </p>
                 </div>
             </div>
@@ -50,22 +45,18 @@
 
                 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                     <div class="bg-orange-500 p-4 lg:p-6">
-                        <h3 class="text-white text-3xl font-bold text-center">Visi</h3>
+                        <h3 class="text-white text-3xl font-bold text-center">{{ __('About_vision') }}</h3>
                     </div>
                     <div class="bg-white p-8 flex-grow">
                         <ul class="space-y-5 list-disc list-inside text-gray-700">
                             <li>
-                                Menjadi pemimpin pasar dalam penyediaan solusi energi bersih berbasis CNG di Indonesia,
-                                dengan jaringan distribusi yang luas dan terpercaya.
+                                {{ __('About_vision_details') }}
                             </li>
                             <li>
-                                Menjadi mitra energi yang terpercaya bagi pelanggan, dengan menyediakan produk dan layanan
-                                berkualitas tinggi yang memenuhi kebutuhan dan harapan mereka.
+                                {{ __('About_vision_details2') }}
                             </li>
                             <li>
-                                Menjadi perusahaan energi yang bertanggung jawab secara sosial dan lingkungan, dengan
-                                menerapkan praktik bisnis yang berkelanjutan dan berkontribusi pada pembangunan
-                                berkelanjutan.
+                                {{ __('About_vision_details3') }}
                             </li>
                         </ul>
                     </div>
@@ -73,21 +64,18 @@
 
                 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                     <div class="bg-orange-500 p-6">
-                        <h3 class="text-white text-3xl font-bold text-center">Misi</h3>
+                        <h3 class="text-white text-3xl font-bold text-center">{{ __('About_mission') }}</h3>
                     </div>
                     <div class="bg-white p-8 flex-grow">
                         <ul class="space-y-5 list-disc list-inside text-gray-700">
                             <li>
-                                Membangun stasiun pengisian (mother station) CNG yang strategis di sepanjang jalur
-                                transportasi umum, serta menyediakan layanan purna jual yang cepat dan efisien.
+                                {{ __('About_mission_details') }}
                             </li>
                             <li>
-                                Mengembangkan dan memperluas infrastruktur CNG yang modern dan efisien, guna memastikan
-                                ketersediaan pasokan gas yang stabil dan terjangkau.
+                                {{ __('About_mission_details2') }}
                             </li>
                             <li>
-                                Membangun kemitraan strategis dengan berbagai pihak, termasuk pemerintah, pemasok, dan
-                                pelanggan, untuk memperkuat posisi perusahaan di pasar.
+                               {{ __('About_mission_details3') }}
                             </li>
                         </ul>
                     </div>
@@ -96,7 +84,7 @@
         </div>
     </section>
 
-    <section class="bg-gray-100 py-16 lg:px-28">
+    {{-- <section class="bg-gray-100 py-16 lg:px-28">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 mb-10">
                 Legalitas Perusahaan
@@ -114,5 +102,5 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

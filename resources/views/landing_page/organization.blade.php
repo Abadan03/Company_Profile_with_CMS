@@ -16,7 +16,7 @@
 
     <section class="bg-gray-50 py-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto rounded-xl shadow-lg overflow-hidden border border-gray-200">
+            <div class="max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden border border-gray-200">
 
                 {{-- Header Kartu Oranye --}}
                 <div class="bg-orange-400 p-4 flex items-center justify-center space-x-3 w-full">
@@ -26,13 +26,19 @@
 
                 <div class="p-6 text-center">
                     <h3 class="font-bold text-xl md:text-2xl tracking-wide text-gray-800">
-                        Farhan Firman Syah
+                        M Farhan Firman Syah
                     </h3>
+                    <div class="border-t-2 border-black my-4"></div>
+                    <p class="justify-center align-middle"><span class=" font-semibold">Jabatan</span> : Direktur</p>
                 </div>
 
                 <div class="bg-gray-100 p-8">
                     <img src="{{ asset('assets/strukture.jpg') }}" alt="Struktur Organisasi PT Rajawali Chakti Utama"
                         class="w-full h-auto">
+                </div>
+
+                <div class="p-6">
+                    <p class="text-center"> <q> Gas alam adalah napas bumi yang murni, hadir untuk memberi kehidupan dan menerangi peradaban. Ia mengajarkan kita arti kesabaran, karena energi besar lahir dari proses panjang. Seperti gas alam yang tak terlihat namun bermanfaat, begitu pula kehidupan: kebaikan sejati sering datang tanpa disadari, namun selalu meninggalkan cahaya, harapan, dan keseimbangan bagi sesama serta alam semesta. </q></p>
                 </div>
             </div>
         </div>

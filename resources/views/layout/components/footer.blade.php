@@ -25,42 +25,43 @@
                 <div class="mt-6 space-y-4 text-sm leading-relaxed">
                     <p>
                         <strong class="text-white">Office:</strong><br>
-                        Jl. Jatinegara Barat 1 No.5-6, RT.2/RW.4, Bali Mester, Kecamatan Jatinegara, Kota Jakarta Timur,
-                        Daerah Khusus Ibukota, Jakarta 13310
+                        Jl. Rungkut Asri Timur XV/76<br>
+                        Surabaya, Jawa Timur 60293<br>
+                        Indonesia
                     </p>
-                    <p>
+                    {{-- <p>
                         <strong class="text-white">Cooperation Hub:</strong><br>
                         Jl. Salihara No.41A, RT.1/RW.3, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota, Jakarta
                         12520
-                    </p>
+                    </p> --}}
                 </div>
 
                 <div class="mt-8 space-y-3 text-sm">
-                    <a href="tel:02183705680" class="flex items-center space-x-3 hover:text-white">
+                    <a href="tel:+6285185401114" class="flex items-center space-x-3 hover:text-white">
                         <svg class="w-5 h-5">
                             <use href="#icon-phone"></use>
                         </svg>
-                        <span>021 8370 5680</span>
+                        <span>+62 851-8540-1114</span>
                     </a>
-                    <a href="mailto:info@citosidinc.id" class="flex items-center space-x-3 hover:text-white">
+                    <a href="mailto:rajawalichaktiutama@gmail.com" class="flex items-center space-x-3 hover:text-white">
                         <svg class="w-5 h-5">
                             <use href="#icon-mail"></use>
                         </svg>
-                        <span>info@citosidinc.id</span>
+                        <span>rajawalichaktiutama@gmail.com</span>
                     </a>
                 </div>
             </div>
 
             <div class="flex space-x-16">
-                <div>
+                {{-- <div>
                     <h4 class="font-bold text-white mb-4">Tentang</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:text-white hover:underline">Kebijakan Layanan</a></li>
                         <li><a href="#" class="hover:text-white hover:underline">Kebijakan Privasi</a></li>
                     </ul>
-                </div>
+                </div> --}}
                 <div>
-                    <h4 class="font-bold text-white mb-4">Layanan</h4>
+                    <h4 class="font-bold text-white mb-4">{{ __('Footer_Services') }}</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:text-white hover:underline">Compressed Natural Gas</a></li>
                         <li><a href="#" class="hover:text-white hover:underline">Mother Station</a></li>
@@ -69,33 +70,33 @@
             </div>
 
             <div>
-                <h4 class="font-bold text-white">Ikuti kami dan dapatkan info menarik!</h4>
+                <h4 class="font-bold text-white">{{ __('Footer_Sweet') }}</h4>
                 <div class="flex items-center space-x-4 mt-4">
                     <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="whatsapp"
                             class="w-6 h-6" />
                     </a>
-                    <a href="#" class="hover:text-white">
+                    <a href="https://www.instagram.com/rajawalichaktiutama?igsh=MXEzOXh4eTBpN3Vidw==" class="hover:text-white">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="instagram"
                             class="w-6 h-6" />
                     </a>
-                    <a href="#" class="hover:text-white m-0">
+                    {{-- <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/gmail-new.png" alt="gmail"
                             class="w-6 h-6" />
-                    </a>
+                    </a> --}}
                     <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
                             class="w-6 h-6" />
                     </a>
-                    <a href="#" class="hover:text-white m-0">
+                    {{-- <a href="#" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok--v1.png" alt="tiktok"
                             class="w-6 h-6" />
-                    </a>
+                    </a> --}}
                 </div>
 
                 <hr class="border-gray-500 my-6">
 
-                <h4 class="font-bold text-white">Dapatkan Informasi Terbaru Dari Kami!</h4>
+                <h4 class="font-bold text-white">{{ __('Footer_Info') }}</h4>
                 <form class="flex mt-4">
                     <input type="email" placeholder="Email Anda"
                         class="w-full rounded-l-md border-0 bg-gray-200 text-gray-800 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"

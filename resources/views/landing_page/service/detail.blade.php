@@ -52,11 +52,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div>
                     <img src="{{ asset($service->image) }}" alt="Ilustrasi Stasiun Gas"
-                        class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg">
+                        class="w-full h-64 sm:h-80 md:h-96 object-fit rounded-xl shadow-lg">
                 </div>
                 <div>
                     <img src="{{ asset($service->image) }}" alt="Ilustrasi Stasiun Gas"
-                        class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg">
+                        class="w-full h-64 sm:h-80 md:h-96 object-fit rounded-xl shadow-lg">
                 </div>
             </div>
 
