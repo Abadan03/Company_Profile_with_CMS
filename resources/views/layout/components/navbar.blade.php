@@ -106,7 +106,7 @@
             'text-orange-500 font-bold' => Route::is('home'),
             'text-white' => !Route::is('home'),
         ])>
-            {{ __('Beranda') }}
+            {{ __('Navigation.Beranda') }}
             <svg class="w-5 h-5 {{ Route::is('home') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -118,7 +118,7 @@
             'text-orange-500 font-bold' => Route::is('about'),
             'text-white' => !Route::is('about'),
         ])>
-            {{ __('Tentang_kami') }}
+            {{ __('Navigation.Tentang_kami') }}
             <svg class="w-5 h-5 {{ Route::is('about') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -130,7 +130,7 @@
             'text-orange-500 font-bold' => Route::is('service'),
             'text-white' => !Route::is('service'),
         ])>
-            {{ __('Produk_dan_Layanan') }}
+            {{ __('Navigation.Produk_dan_Layanan') }}
             <svg class="w-5 h-5 {{ Route::is('service') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -142,7 +142,7 @@
             'text-orange-500 font-bold' => Route::is('organization'),
             'text-white' => !Route::is('organization'),
         ])>
-            {{ __('Struktur_organisasi') }}
+            {{ __('Navigation.Struktur_organisasi') }}
             <svg class="w-5 h-5 {{ Route::is('organization') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -166,7 +166,7 @@
             'text-orange-500 font-bold' => Route::is('gallery'),
             'text-white' => !Route::is('gallery'),
         ])>
-            {{ __('Galeri') }}
+            {{ __('Navigation.Galeri') }}
             <svg class="w-5 h-5 {{ Route::is('gallery') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -176,9 +176,11 @@
 
     <div class="p-4 mt-auto">
         <div class="flex items-center text-white text-sm">
-            <a href="#" class="hover:underline">English</a>
+            <a href="{{ route('lang.switch', 'en') }}"
+                class="{{ app()->getLocale() == 'en' ? 'font-bold underline' : 'hover:underline' }} hover:underline">English</a>
             <span class="mx-2">|</span>
-            <a href="#" class="font-bold underline">Indonesia</a>
+            <a href="{{ route('lang.switch', 'id') }}"
+                class="{{ app()->getLocale() == 'id' ? 'font-bold underline' : 'hover:underline' }} hover:underline">Indonesia</a>
         </div>
     </div>
 </div>

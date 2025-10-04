@@ -70,13 +70,13 @@
                 {{-- Kanan: 2 foto bertumpuk (Tidak ada perubahan di sini) --}}
                 <div class="grid grid-rows-2 gap-6">
                     <a href="#" class="group block rounded-xl overflow-hidden shadow-lg">
-                        <div class="aspect-[16/9]">
+                        <div class="aspect-[16/12]">
                             <img src="{{ asset('assets/galeri/g3.png') }}"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                         </div>
                     </a>
                     <a href="#" class="group block rounded-xl overflow-hidden shadow-lg">
-                        <div class="aspect-[16/9]">
+                        <div class="aspect-[16/12]">
                             <img src="{{ asset('assets/galeri/g4.png') }}"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                         </div>

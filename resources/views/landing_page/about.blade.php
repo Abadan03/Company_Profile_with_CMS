@@ -19,7 +19,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <img src="{{ asset('assets/ms.png') }}" alt="Fasilitas PT Rajawali Chakti Utama"
-                    class="max-w-[550px] md:min-h-[350px] object-fit rounded-2xl shadow-lg">
+                    class="w-full md:min-h-[350px] object-fit rounded-2xl shadow-lg">
             </div>
 
             <div>
