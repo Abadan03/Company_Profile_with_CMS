@@ -15,13 +15,13 @@
 
         <div class="flex items-center justify-between">
             <ul class="hidden lg:flex items-baseline">
-                {{-- dari branch development --}}
+                {{-- dekstop --}}
                 <li>
                     <a href="{{ route('home') }}" @class([
                         'border-b-2 font-bold' => Route::is('home'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Beranda') }}
+                        {{ __('Navigation.Beranda') }}
                     </a>
                 </li>
                 <li>
@@ -29,7 +29,7 @@
                         'border-b-2 font-bold' => Route::is('about'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Tentang_kami') }}
+                        {{ __('Navigation.Tentang_kami') }}
                     </a>
                 </li>
                 <li>
@@ -37,7 +37,7 @@
                         'border-b-2 font-bold' => Route::is('service'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Produk_dan_Layanan') }}
+                        {{ __('Navigation.Produk_dan_Layanan') }}
                     </a>
                 </li>
                 <li>
@@ -45,23 +45,23 @@
                         'border-b-2 font-bold' => Route::is('organization'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Struktur_organisasi') }}
+                        {{ __('Navigation.Struktur_organisasi') }}
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{ route('article') }}" @class([
                         'border-b-2 font-bold' => Route::is('article'),
                         'text-white hover:border-b-2 me-5 transition-colors',
                     ])>
-                        {{ __('Berita_dan_Artikel') }}
+                        {{ __('Navigation.Berita_dan_Artikel') }}
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{ route('gallery') }}" @class([
                         'border-b-2 font-bold' => Route::is('gallery'),
                         'text-white hover:border-b-2 transition-colors',
                     ])>
-                        {{ __('Galeri') }}
+                        {{ __('Navigation.Galeri') }}
                     </a>
                 </li>
             </ul>
@@ -69,7 +69,8 @@
             <div class="flex-1 flex lg:justify-end">
                 <a href="#" class="flex items-center space-x-2">
                     <img src="{{ asset('assets/logo.png') }}" alt="Logo Icon">
-                    <span class="text-white font-bold text-lg tracking-wider">PT. RAJAWALI BHAKTI UTAMA</span>
+                    <span class="text-white font-bold text-sm lg:text-lg tracking-wider">PT. RAJAWALI CHAKTI
+                        UTAMA</span>
                 </a>
             </div>
 
@@ -91,7 +92,7 @@
     <div class="flex items-center justify-between p-4 border-b border-gray-800">
         <a href="#" class="flex items-center space-x-2">
             <img src="{{ asset('assets/logo.png') }}" alt="Logo Icon">
-            <span class="text-white font-bold text-lg">PT. RAJAWALI BHAKTI UTAMA</span>
+            <span class="text-white font-bold text-lg">PT. RAJAWALI CHAKTI UTAMA</span>
         </a>
         <button id="close-menu-button" class="text-orange-500" aria-label="Close menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,42 +101,86 @@
         </button>
     </div>
     <div class="flex-grow p-4 space-y-2">
-        <a href="#" class="flex justify-between items-center py-4 text-orange-500 font-bold">Beranda <svg
-                class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-            </svg> </a>
-        <a href="{{ route('about') }}" class="flex justify-between items-center py-4 text-white">Tentang Kami <svg
-                class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-            </svg> </a>
-        <a href="#" class="flex justify-between items-center py-4 text-white">Produk & Layanan <svg
-                class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-            </svg> </a>
-        <a href="#" class="flex justify-between items-center py-4 text-white">Struktur Organisasi <svg
-                class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-            </svg> </a>
-        <a href="#" class="flex justify-between items-center py-4 text-white">Berita & Artikel <svg
-                class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-            </svg> </a>
-        <a href="#" class="flex justify-between items-center py-4 text-white">Galeri <svg
-                class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-            </svg> </a>
+        <a href="{{ route('home') }}" @class([
+            'flex justify-between items-center py-4',
+            'text-orange-500 font-bold' => Route::is('home'),
+            'text-white' => !Route::is('home'),
+        ])>
+            {{ __('Navigation.Beranda') }}
+            <svg class="w-5 h-5 {{ Route::is('home') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <a href="{{ route('about') }}" @class([
+            'flex justify-between items-center py-4',
+            'text-orange-500 font-bold' => Route::is('about'),
+            'text-white' => !Route::is('about'),
+        ])>
+            {{ __('Navigation.Tentang_kami') }}
+            <svg class="w-5 h-5 {{ Route::is('about') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <a href="{{ route('service') }}" @class([
+            'flex justify-between items-center py-4',
+            'text-orange-500 font-bold' => Route::is('service'),
+            'text-white' => !Route::is('service'),
+        ])>
+            {{ __('Navigation.Produk_dan_Layanan') }}
+            <svg class="w-5 h-5 {{ Route::is('service') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <a href="{{ route('organization') }}" @class([
+            'flex justify-between items-center py-4',
+            'text-orange-500 font-bold' => Route::is('organization'),
+            'text-white' => !Route::is('organization'),
+        ])>
+            {{ __('Navigation.Struktur_organisasi') }}
+            <svg class="w-5 h-5 {{ Route::is('organization') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        {{-- <a href="{{ route('article') }}" @class([
+            'flex justify-between items-center py-4',
+            'text-orange-500 font-bold' => Route::is('article'),
+            'text-white' => !Route::is('article'),
+        ])>
+            {{ __('Berita_dan_Artikel') }}
+            <svg class="w-5 h-5 {{ Route::is('article') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a> --}}
+
+        <a href="{{ route('gallery') }}" @class([
+            'flex justify-between items-center py-4',
+            'text-orange-500 font-bold' => Route::is('gallery'),
+            'text-white' => !Route::is('gallery'),
+        ])>
+            {{ __('Navigation.Galeri') }}
+            <svg class="w-5 h-5 {{ Route::is('gallery') ? 'text-orange-500' : 'text-gray-500' }}" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
     </div>
+
     <div class="p-4 mt-auto">
         <div class="flex items-center text-white text-sm">
-            <a href="#" class="hover:underline">English</a>
+            <a href="{{ route('lang.switch', 'en') }}"
+                class="{{ app()->getLocale() == 'en' ? 'font-bold underline' : 'hover:underline' }} hover:underline">English</a>
             <span class="mx-2">|</span>
-            <a href="#" class="font-bold underline">Indonesia</a>
+            <a href="{{ route('lang.switch', 'id') }}"
+                class="{{ app()->getLocale() == 'id' ? 'font-bold underline' : 'hover:underline' }} hover:underline">Indonesia</a>
         </div>
     </div>
 </div>

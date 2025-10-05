@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Rajawali Bhakti Utama')</title>
+    <title>@yield('title', 'Rajawali Chakti Utama')</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/logo.png') }}">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -47,6 +49,8 @@
             </svg>
         </a>
     </div>
+
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

@@ -1,11 +1,48 @@
 
 {
-  "Beranda" : "Home",
-  "Tentang_kami" : "About us",
-  "Produk_dan_Layanan" : "Product & Service",
-  "Struktur_organisasi" : "Organizational Structure",
-  "Berita_dan_Artikel" : "News & Article",
-  "Galeri" : "Gallery",
-  "Selengkapnya": "Read More"
+    "Navigation.Beranda": "Home",
+    "Navigation.Tentang_kami": "About us",
+    "Navigation.Produk_dan_Layanan": "Product & Service",
+    "Navigation.Struktur_organisasi": "Board of Directors",
+    "Navigation.Berita_dan_Artikel": "News & Article",
+    "Navigation.Galeri": "Gallery",
+
+    "Hero.Selengkapnya": "Read More",
+    "Hero.CNG": "Compressed Natural Gas (CNG) is one of the alternative energy sources stored under high pressure and is increasingly being used as fuel for both industrial applications and vehicles. CNG can reduce Carbon Dioxide (CO₂) emissions by up to 30%, Carbon Monoxide (CO) emissions by up to 90%, and Nitrogen Oxide emissions by up to 95%.",
+
+    "Benefits_CNG": "Advantages of Using CNG",
+    "Benefits_ecofuel": "Environmentally friendly and clean fuel",
+    "Benefits_gasemisi": "Produces low emission gases",
+    "Benefits_invest": "Affordable and long-lasting investment",
+    "Benefits_machine": "Cleaner production machinery",
+    "Benefits_safety": "Safer fuel compared to other types",
+    "Benefits_cost": "Production costs reduced by up to 30–40%",
+
+    "MS_tittle": "Mother Station",
+    "MS_desc": "We provide comprehensive facilities ranging from natural gas compression, CNG cylinder manufacturing, to pipeline installation—supported by professional energy consulting services to ensure efficiency and safety.",
+
+    "Clients_tittle": "Our Clients",
+    "Last_section": "Join Us in Realizing Clean Energy",
+    "Last_contact": "Contact Us",
+
+    "Footer_Services": "Services",
+    "Footer_Sweet": "Follow us and get exciting updates!",
+    "Footer_Info": "Get the Latest Information from Us!",
+
+    "About_tittle": "About Us",
+    "About_desc": "PT Rajawali Chakti Utama is an energy company focused on providing clean energy solutions based on Compressed Natural Gas (CNG) in Indonesia. With a vision to become a market leader in environmentally friendly energy, the company is committed to delivering high-quality services and products that meet customer needs while supporting sustainable development.",
+    "About_desc2": "The CNG we offer is more environmentally friendly, capable of reducing emissions by up to 90% and improving production cost efficiency by 30–40%, making it a clean, safe, and cost-effective energy choice for both industrial and transportation sectors.",
+    "About_vision": "Vision",
+    "About_mission": "Mission",
+    "About_vision_details": "To become the market leader in providing clean energy solutions based on CNG in Indonesia, supported by a wide and reliable distribution network.",
+    "About_vision_details2": "To be a trusted energy partner for customers by delivering high-quality products and services that meet their needs and expectations.",
+    "About_vision_details3": "To be a socially and environmentally responsible energy company by implementing sustainable business practices and contributing to long-term development.",
+
+    "About_mission_details": "To build strategically located CNG filling stations (mother stations) along major transportation routes, and provide fast and efficient after-sales services.",
+    "About_mission_details2": "To develop and expand modern and efficient CNG infrastructure to ensure a stable and affordable gas supply.",
+    "About_mission_details3": "To establish strategic partnerships with various stakeholders, including government, suppliers, and customers, to strengthen the company’s position in the market.",
+
+    "P&D_tittle": "Clean & Efficient Energy Solutions",
+    "P&D_desc": "We provide Compressed Natural Gas (CNG)-based services to support industry and transportation with cost-effective, environmentally friendly, and modern technology solutions. Backed by our experience and commitment, every energy solution we offer prioritizes safety, efficiency, and sustainability."
 }
 

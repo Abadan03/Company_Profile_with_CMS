@@ -21,15 +21,19 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        // Multilanghero::create([
-        //     'title' => [
-        //         'en' => 'Sustainable Energy Solutions',
-        //         'id' => 'Solusi Energi Berkelanjutan',
-        //     ],
-        //     'content' => [
-        //         'en' => 'Through Compressed Natural Gas Container (CNGC) technology, we deliver clean energy that is safe, efficient, and environmentally friendly to support Indonesia’s energy needs.',
-        //         'id' => 'Melalui teknologi Compressed Natural Gas Container (CNGC), kami menghadirkan energi bersih yang aman, efisien, dan ramah lingkungan untuk mendukung kebutuhan energi Indonesia.'
-        //     ]
+        Multilanghero::create([
+            'title' => [
+                'en' => 'Sustainable Energy Solutions',
+                'id' => 'Solusi Energi Bersih dan Efisien bersama kami',
+            ],
+            'content' => [
+                'en' => 'Through Compressed Natural Gas (CNG) technology, we deliver clean energy that is safe, efficient, and environmentally friendly to support Indonesia’s energy needs.',
+                'id' => 'Melalui teknologi Compressed Natural Gas (CNG), kami menghadirkan energi bersih yang aman, efisien, dan ramah lingkungan untuk mendukung kebutuhan energi Indonesia.'
+            ]
+        ]);
+
+        // $this->call([
+        //     multilanguage::class,
         // ]);
     }
 }
