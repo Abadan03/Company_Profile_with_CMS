@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ptrcucom/github/
+    - export DEPLOYPATH=/home/ptrcucom/repositories/Company_Profile_with_CMS
     - /bin/cp -R * $DEPLOYPATH
