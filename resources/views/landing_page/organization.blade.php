@@ -8,7 +8,8 @@
         <img src="{{ asset('assets/bg-uni.webp') }}" alt="Container Yard"
             class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative container">
-            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Struktur Organisasi</h1>
+            <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">{{ __('Navigation.Struktur_organisasi') }}</h1>
+            {{-- <h1 class="text-2xl lg:text-5xl text-white mt-28 lg:mt-20">Direksi</h1> --}}
         </div>
     </section>
 

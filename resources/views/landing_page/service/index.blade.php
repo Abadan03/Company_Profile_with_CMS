@@ -99,7 +99,8 @@
                     {{ __('Last_section') }}
                 </h2>
 
-                <a href="#"
+                <a href="https://wa.me/6285185401114" target="_blank"
+            rel="noopener noreferrer" title="Hubungi via WhatsApp"
                     class="inline-block bg-orange-400 text-white font-bold text-lg px-8 py-2 rounded-md shadow-md transition-transform hover:scale-105 hover:bg-orange-500 flex-shrink-0">
                     {{ __('Last_contact') }}
                 </a>

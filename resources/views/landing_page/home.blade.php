@@ -13,7 +13,7 @@
             <p class="text-white text-lg my-8 max-w-2xl">
                 {{ $hero->content }}
             </p>
-            <a href="#"
+            <a href="{{ route('about') }}"
                 class="text-white inline-flex items-center space-x-3 text-lg hover:text-orange-400 transition-colors">
                 <span>{{ __('Hero.Selengkapnya') }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -291,7 +291,7 @@
                     {{ __('Last_section') }}
                 </h2>
 
-                <a href="https://wa.me/622183705680" target="_blank"
+                <a href="https://wa.me/6285185401114" target="_blank"
             rel="noopener noreferrer" title="Hubungi via WhatsApp"
                     class="inline-block bg-orange-400 text-white font-bold text-lg px-8 py-2 rounded-md shadow-md transition-transform hover:scale-105 hover:bg-orange-500 flex-shrink-0">
                     {{ __('Last_contact') }}

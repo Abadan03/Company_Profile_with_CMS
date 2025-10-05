@@ -72,7 +72,8 @@
             <div>
                 <h4 class="font-bold text-white">{{ __('Footer_Sweet') }}</h4>
                 <div class="flex items-center space-x-4 mt-4">
-                    <a href="#" class="hover:text-white m-0">
+                    <a href="https://wa.me/6285185401114" target="_blank"
+            rel="noopener noreferrer" title="Hubungi via WhatsApp" class="hover:text-white m-0">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="whatsapp"
                             class="w-6 h-6" />
                     </a>
@@ -96,14 +97,14 @@
 
                 <hr class="border-gray-500 my-6">
 
-                <h4 class="font-bold text-white">{{ __('Footer_Info') }}</h4>
-                <form class="flex mt-4">
+                {{-- <h4 class="font-bold text-white">{{ __('Footer_Info') }}</h4> --}}
+                {{-- <form class="flex mt-4">
                     <input type="email" placeholder="Email Anda"
                         class="w-full rounded-l-md border-0 bg-gray-200 text-gray-800 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         required>
                     <button type="submit"
                         class="bg-orange-600 text-white font-bold px-5 py-2 rounded-r-md hover:bg-orange-700 transition-colors">Berlangganan</button>
-                </form>
+                </form> --}}
             </div>
         </div>
     </div>
